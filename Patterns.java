@@ -154,6 +154,81 @@ class Pattern10{
     }
 }
 
+class Pattern11{
+    static void Pattern11(){
+        int n=5,num;
+        for(int i=1; i<=n; i++){
+            if(i%2==0){
+                num = 0;
+            }else{
+                num = 1;
+            }
+            for(int j=1; j<=i; j++) {
+                System.out.print(num);
+                num = 1 - num;
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Pattern12{
+    static void Pattern12(){
+        int n=5;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+            for(int j=1; j<=2*n-(2*i); j++){
+                System.out.print(" ");
+            }
+            for(int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+class Pattern13{
+    static void Pattern13(){
+        int n=5,num=1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(num + " ");
+                num=num+1;
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Pattern14{
+    static void Pattern14(){
+        int n=5;
+        for(int i=1; i<=n; i++){
+            for(char c='A'; c<'A'+i; c++){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Pattern15{
+    static void Pattern15(){
+        int n=5;
+        for(int i=0; i<n; i++){
+            for(char c='A'; c<='A'+(n-i-1); c++){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
 
 
 public class Patterns {
@@ -198,5 +273,24 @@ public class Patterns {
         p10.Pattern10();
         System.out.println();
 
+        Pattern11 p11 = new Pattern11();
+        p11.Pattern11();
+        System.out.println();
+
+        Pattern12 p12 = new Pattern12();
+        p12.Pattern12();
+        System.out.println();
+
+        Pattern13 p13 = new Pattern13();
+        p13.Pattern13();
+        System.out.println();
+
+        Pattern14 p14 = new Pattern14();
+        p14.Pattern14();
+        System.out.println();
+
+        Pattern15 p15 = new Pattern15();
+        p15.Pattern15();
+        System.out.println();
     }
 }
