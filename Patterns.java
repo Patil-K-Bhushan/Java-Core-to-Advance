@@ -228,7 +228,54 @@ class Pattern15{
     }
 }
 
+class Pattern16{
+    static void Pattern16(){
+        int n=5;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print((char)(('A'+i)));
+            }
+            System.out.println();
+        }
+    }
+}
 
+class Pattern17{
+    static void Pattern17(){
+        int n=5;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n-i-1; j++){
+                System.out.print(" ");
+            }
+            char c = 'A';
+            int breakpoint = (2*i+1)/2;
+            for(int j=1; j<=2*i+1; j++){
+                System.out.print(c);
+                if(j<=breakpoint){
+                    c++;
+                } else{
+                    c--;
+                }
+            }
+            for(int j=0; j<n-i-1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class Pattern18{
+    static void Pattern18(){
+        int n=5;
+        for(int i=0; i<n; i++){
+            for(char ch =(char)(int)('A'+n-1-i);ch<=(char)(int)('A'+n-1);ch++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+}
 
 
 public class Patterns {
@@ -292,5 +339,18 @@ public class Patterns {
         Pattern15 p15 = new Pattern15();
         p15.Pattern15();
         System.out.println();
+
+        Pattern16 p16 = new Pattern16();
+        p16.Pattern16();
+        System.out.println();
+
+        Pattern17 p17 = new Pattern17();
+        p17.Pattern17();
+        System.out.println();
+
+        Pattern18 p18 = new Pattern18();
+        p18.Pattern18();
+        System.out.println();
+
     }
 }

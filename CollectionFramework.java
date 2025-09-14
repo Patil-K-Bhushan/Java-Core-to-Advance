@@ -35,6 +35,61 @@ class hashSet{
     }
 }
 
+class linkedHashSet{
+    static void StoreUniqueElement(){
+        LinkedHashSet<Integer> LHS = new LinkedHashSet<>();
+        int[] a = {0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,6,10,7,9,};
+
+        for(int i=0; i<a.length; i++){
+            LHS.add(a[i]);
+        }
+        System.out.println(LHS);
+    }
+}
+
+class hashMap{
+    static void KeyPair(){
+        HashMap<Integer,Integer> HM = new HashMap<>();
+        int[] a = {0,0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5};
+
+        for(int i=0; i<a.length; i++){
+            if(HM.containsKey(a[i])){
+                int temp = HM.get(a[i]);
+                HM.replace(a[i],temp+1);
+            } else{
+                HM.put(a[i],1);
+            }
+        }
+        System.out.println(HM);
+    }
+}
+
+ class linkedHashMap{
+    static void Sort(){
+        LinkedHashMap<Integer,String> LHM = new LinkedHashMap<>();
+
+        LHM.put(15,"Paneer");
+        LHM.put(10,"Sushi");
+        LHM.put(25,"Paratha");
+        LHM.put(30,"Biryani");
+
+        System.out.println(LHM);
+    }
+ }
+
+ class treeHashMap{
+    static void THM(){
+        TreeMap<Integer,String> TM = new TreeMap<>();
+
+        TM.put(25,"PavBhaji");
+        TM.put(10,"Kaju Curry");
+        TM.put(16,"MeduWada");
+        TM.put(15,"Idli");
+
+        System.out.println(TM);
+    }
+ }
+
 
 class CollectionFramework {
     public static void main(String[] args) {
@@ -44,6 +99,22 @@ class CollectionFramework {
 
         hashSet HS = new hashSet();
         HS.RemoveDuplicateNumber();
+        System.out.println();
+
+        linkedHashSet LHS = new linkedHashSet();
+        LHS.StoreUniqueElement();
+        System.out.println();
+
+        hashMap HM = new hashMap();
+        HM.KeyPair();
+        System.out.println();
+
+        linkedHashMap LHM = new linkedHashMap();
+        LHM.Sort();
+        System.out.println();
+
+        treeHashMap THM = new treeHashMap();
+        THM.THM();
         System.out.println();
     }
 }
