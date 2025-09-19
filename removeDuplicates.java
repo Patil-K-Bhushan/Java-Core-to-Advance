@@ -27,8 +27,8 @@ class removeDuplicates {
             System.out.println("Please Enter the Number");
             num[i] = sc.nextInt();
         }
-
+        Arrays.sort(num);
         Remove rm = new Remove();
-        int[]  numbers = rm.Remove(num);
+        System.out.println(rm.Remove(num));
     }
 }
