@@ -340,6 +340,45 @@ class Pattern19 {
     }
 }
 
+class Pattern20{
+    static void Pattern20() {
+        int n = 5;
+        int spaces = 2 * n - 2;
+
+        // Outer loop for printing row.
+        for (int i = 1; i <= 2 * n - 1; i++) {
+
+            // stars for first half
+            int stars = i;
+
+            // stars for the second half.
+            if (i > n) stars = 2 * n - i;
+
+            //for printing the stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+
+            //for printing the spaces
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+
+            //for printing the stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+
+            // As soon as the stars for each iteration are printed, we move to the
+            // next row and give a line break otherwise all stars
+            // would get printed in 1 line.
+            System.out.println();
+            if (i < n) spaces -= 2;
+            else spaces += 2;
+        }
+    }
+}
+
 public class Patterns {
     public static void main(String[] args) {
         Pattern1 p1 = new Pattern1();
@@ -416,6 +455,10 @@ public class Patterns {
 
         Pattern19 p19 = new Pattern19();
         p19.Pattern19();
+        System.out.println();
+
+        Pattern20 p20 = new Pattern20();
+        p20.Pattern20();
         System.out.println();
 
     }
