@@ -379,6 +379,22 @@ class Pattern20{
     }
 }
 
+class Pattern21{
+    static void Pattern21(){
+        int n = 5;
+            for(int i = 0; i<n; i++){
+                for(int j=0; j<n; j++){
+                    if(i==0 || i==n-1 || j==0 || j==n-1){
+                        System.out.print("*");
+                    } else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        }
+}
+
 public class Patterns {
     public static void main(String[] args) {
         Pattern1 p1 = new Pattern1();
@@ -459,6 +475,10 @@ public class Patterns {
 
         Pattern20 p20 = new Pattern20();
         p20.Pattern20();
+        System.out.println();
+
+        Pattern21 p21 = new Pattern21();
+        p21.Pattern21();
         System.out.println();
 
     }
