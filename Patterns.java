@@ -1,5 +1,7 @@
 //Strivers A2Z Series Pattern
 
+import java.sql.SQLOutput;
+
 class Pattern1{
     static void Pattern1() {
         int n = 5;
@@ -382,17 +384,33 @@ class Pattern20{
 class Pattern21{
     static void Pattern21(){
         int n = 5;
-            for(int i = 0; i<n; i++){
-                for(int j=0; j<n; j++){
-                    if(i==0 || i==n-1 || j==0 || j==n-1){
-                        System.out.print("*");
-                    } else{
-                        System.out.print(" ");
-                    }
+        for(int i = 0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i==0 || i==n-1 || j==0 || j==n-1){
+                    System.out.print("*");
+                } else{
+                    System.out.print(" ");
                 }
-                System.out.println();
             }
+            System.out.println();
         }
+    }
+}
+
+class Pattern22{
+    static void Pattern22(){
+        int n = 3;
+        for(int i=0; i<2*n-1; i++){
+            for(int j=0; j<2*n-1; j++){
+                int top = i;
+                int left = j;
+                int right = (2*n-2)-j;
+                int bottom = (2*n-2)-i;
+                System.out.print(n-Math.min(Math.min(top,bottom),Math.min(left,right)));
+            }
+            System.out.println();
+        }
+    }
 }
 
 public class Patterns {
@@ -479,6 +497,10 @@ public class Patterns {
 
         Pattern21 p21 = new Pattern21();
         p21.Pattern21();
+        System.out.println();
+
+        Pattern22 p22 = new Pattern22();
+        p22.Pattern22();
         System.out.println();
 
     }
