@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Solution{
+class isPalindrome{
     public boolean isPalindrome(int n){
         if (n < 0) return false;
         int xCopy = n;
@@ -19,7 +19,7 @@ class Palindrome {
         System.out.println("Please Enter the number");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        Solution sln = new Solution();
+        isPalindrome sln = new isPalindrome();
         boolean b = sln.isPalindrome(num);
         if(b == true){
             System.out.println("The number is Palindrome number");
