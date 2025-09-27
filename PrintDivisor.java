@@ -1,4 +1,4 @@
-//BRUTE FORCE APPROACH
+//OPTIMAL APPROACH
 //Strives A2Z Sheet
 
 import java.util.*;
@@ -10,11 +10,22 @@ class PrintDivisor {
         System.out.println("Please Enter a number: ");
         int n = sc.nextInt();
 
-        System.out.println("Divisors of " + n + " are:");
-        for (int i = 1; i <= n; i++) {
+        ArrayList<Integer> divisors = new ArrayList<>();
+
+        int sqrtN = (int) Math.sqrt(n);
+
+        for (int i = 1; i <= sqrtN; ++i) {
             if (n % i == 0) {
-                System.out.print(i + " ");
+                divisors.add(i);
+                if (i != n / i) {
+                    divisors.add(n / i);
+                }
             }
+        }
+
+        System.out.print("Divisors of " + n + " are: ");
+        for (int divisor : divisors) {
+            System.out.print(divisor + " ");
         }
 
         sc.close();
