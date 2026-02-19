@@ -1,4 +1,4 @@
-// PROGRAM 1
+// PROGRAM 1 - Hello World
 import java.lang.*;
 
 class P01_Hello{
