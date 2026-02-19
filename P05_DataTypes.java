@@ -60,5 +60,13 @@ class P05_DataTypes {
         System.out.println("Bool data type contains True of False as a value");
 
         sc.close();
+
+        /*
+        To see all methods for 
+        1. Integer -> Use "javap java.lang.Integer" in terminal
+        2. Float -> Use "javap java.lang.Float" in terminal
+        3. Byte -> Use "javap java.lang.Byte" in terminal
+        and so on....
+        */
     }
 }
