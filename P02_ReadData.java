@@ -1,3 +1,4 @@
+// PROGRAM 2
 import java.util.Scanner;
 
 class P02_ReadData{
@@ -15,5 +16,7 @@ class P02_ReadData{
 
         String line = sc.nextLine();
         System.out.println("Line: "+ line);
+    
+        sc.close();
     }
 }
