@@ -26,5 +26,7 @@ class P02_ReadData{
         System.out.println("Line: "+ line);
     
         sc.close();
+
+        // To see all scanner methods Use "javap java.util.Scanner" in terminal
     }
 }
